@@ -11,6 +11,14 @@ const routes: Routes = [
   {
     path: 'film-content',
     loadChildren: () => import('./film-content/film-content.module').then( m => m.FilmContentPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
   }
 ];
 @NgModule({
