@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      <ion-icon name="arrow-back-outline" size="large" routerLink='/tabs'></ion-icon>
+      <ion-icon name="arrow-back-outline" size="large" onclick="history.back()"></ion-icon>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,12 @@
 
 
 <ion-content>
-  <swiper #swiper 
+  <swiper #swiper
   [slidesPerView]="1"
   [spaceBetween]="20">
 
 
- <ng-template swiperSlide> 
+ <ng-template swiperSlide>
     <ion-card>
       <img src="/assets/As it was-2.png" alt="">
       <ion-item>
@@ -43,7 +43,7 @@
 <div class="Inhalt">
   <h1>Inhalt</h1>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius mattis aliquet. Nam finibus laoreet ipsum sed fringilla. In facilisis 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius mattis aliquet. Nam finibus laoreet ipsum sed fringilla. In facilisis
   </p>
 </div>
 </ion-card>
@@ -52,14 +52,14 @@
   <div class="Schauspieler">
     <h1>Schauspieler:</h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius mattis aliquet. Nam finibus laoreet ipsum sed fringilla. In facilisis 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius mattis aliquet. Nam finibus laoreet ipsum sed fringilla. In facilisis
     </p>
   </div>
 
   <div class="Regie">
     <h1>Regie:</h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius mattis aliquet. Nam finibus laoreet ipsum sed fringilla. In facilisis 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius mattis aliquet. Nam finibus laoreet ipsum sed fringilla. In facilisis
     </p>
   </div>
   </ion-card>
@@ -70,17 +70,17 @@
       <ion-list-header class="Verfügbar">
         <ion-label>Verfügbar:</ion-label>
       </ion-list-header>
-  
+
       <ion-item>
         <ion-label>DVD</ion-label>
         <ion-radio slot="start" value="DVD"></ion-radio>
       </ion-item>
-  
+
       <ion-item>
         <ion-label>VHS</ion-label>
         <ion-radio slot="start" value="VHS"></ion-radio>
       </ion-item>
-  
+
       <ion-item>
         <ion-label>Blu-Ray</ion-label>
         <ion-radio slot="start" value="Blu-Ray"></ion-radio>
