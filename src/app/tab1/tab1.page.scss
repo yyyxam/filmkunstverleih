@@ -1,3 +1,28 @@
+#filmkunstverleih {
+    background-color: #BE1622;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+ion-header {
+    ion-toolbar {
+        box-shadow: 1px 4px 8px 0px rgba(199, 0, 0, 0);
+        img {
+            width: 100%;
+            display: flex;
+
+        }
+    }
+}
 ion-toolbar {
- max-height: 58px;
+    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.445);
+    
+}
+ion-title {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: inherit;
 }
