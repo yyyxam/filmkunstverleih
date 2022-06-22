@@ -1,6 +1,6 @@
 
 ion-toolbar {
-    --background: #e5e8d1;
+    
 
     ion-button {
         text-transform: initial;
@@ -9,7 +9,7 @@ ion-toolbar {
 }
 
 ion-content {
-    --background: #e5e8d1;
+   
 
     #header {
         display: flex;
@@ -19,7 +19,6 @@ ion-content {
         h1 {
             font-weight: 700;
             font-size: 26px;
-            color: black;
             margin-bottom: 15%;
         }
 
@@ -39,7 +38,7 @@ ion-content {
 
 
         ion-button {
-            --background: #b75043;
+           
             margin-top: 35px;
             height: 48px;
             font-size: 18px;
