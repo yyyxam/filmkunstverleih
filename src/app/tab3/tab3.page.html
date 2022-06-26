@@ -1,36 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Suche
-    </ion-title>
+    <img src="/assets/header.png" alt="">
   </ion-toolbar>
+
 </ion-header>
 
+<ion-content [fullscreen]="true" color="tertiary">
 
-<ion-toolbar>
-  <ion-buttons slot="primary">
-    <ion-button (click)="clickedSearch()">
-      <ion-icon slot="icon-only" name="search"></ion-icon>
-    </ion-button>
-  </ion-buttons>
+  <ion-title id="filmkunstverleih" color="">format filmkunstverleih</ion-title>
+  <ion-buttons slot="primary"></ion-buttons>
   <ion-searchbar #search debounce="500" (ionChange)="_ionChange($event)" placeholder="Search Movies"></ion-searchbar>
-</ion-toolbar>
-
-
-<ion-content [fullscreen]="true">
-
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Suche</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <ion-grid>
     <ion-row>
-      <ion-col>
+      <ion-col >
         <!-- Genre-Tags -->
         <ion-list>
-          <ion-item>
+          <ion-item color="secondary">
             <ion-select (ionChange)="onGenreFilter($event)" placeholder="Genres" [multiple]="true">
               <!-- Optionen müssen aus Datenbank geholt werden -->
               <ion-select-option value="drama">Drama</ion-select-option>
@@ -45,7 +31,7 @@
       <ion-col>
         <!-- Lang-Tags -->
         <ion-list>
-          <ion-item>
+          <ion-item color="secondary">
             <ion-select (ionChange)="onLangFilter($event)" placeholder="Sprachen" [multiple]="true">
               <!-- Optionen müssen aus Datenbank geholt werden -->
               <ion-select-option value="deutsch">Deutsch</ion-select-option>
@@ -58,38 +44,18 @@
     </ion-row>
   </ion-grid>
 
-
-
-
-
-
-  <ion-content>
+  <ion-content  color="tertiary">
     <ion-list>
-      <ion-item *ngFor ='let item of searchedItem'>
+      <ion-item *ngFor ='let item of searchedItem' color="tertiary">
         <ion-label routerLink='/film-content' >{{item.title}}</ion-label>
       </ion-item>
     </ion-list>
   </ion-content>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-
   <ion-list>
     <ion-card>
     <ion-item>
-      <ion-label>
-        Genre
-      </ion-label>
+      <ion-label>Genre</ion-label>
       <ion-select placeholder="Select all Genres" multiple="true">
         <ion-select-option value="drama">Drama</ion-select-option>
         <ion-select-option value="action">Action</ion-select-option>
@@ -104,10 +70,6 @@
     </ion-item>
   </ion-card>
   </ion-list>
-
-
-
-
 
   <ion-list>
     <ion-card>
@@ -125,8 +87,5 @@
     </ion-item>
   </ion-card>
   </ion-list>
-
-
-
 
 </ion-content>
