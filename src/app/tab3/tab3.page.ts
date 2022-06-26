@@ -30,9 +30,11 @@ export class Tab3Page {
   }
 
   movieSearch(): void {
-    console.log(this.keyboardInput);
-    console.log(this.genreInput);
-    console.log(this.langInput);
+    //console.log(this.keyboardInput);
+    //console.log(this.genreInput);
+    //console.log(this.langInput);
+    const genreIn = this.genreInput;
+    const langIn = this.langInput
     this.searchedItem = this.list;
     //KEYBOARD INPUT
     // DON'T filter IF the supplied input is an empty string
@@ -44,14 +46,25 @@ export class Tab3Page {
 
     // if tags not empty, filter for them
     if (this.genreInput.length > 0){
-      this.searchedItem = this.searchedItem.filter((item: any) => {
-        return (item.genre in this.genreInput);
+      this.searchedItem = this.searchedItem.filter(function(item) {
+      for (let genreTag of genreIn){
+        if (item.tags.includes(genreTag)) {
+          return true;
+        }
+      }
       });
     }
 
     if (this.langInput.length > 0){
-      this.searchedItem = this.searchedItem.filter((item: any) => {
-        return (item.lang in this.genreInput);
+      this.searchedItem = this.searchedItem.filter(function(item) {
+        console.log(item.title);
+        console.log(item.lang);
+
+        for (let langTag of langIn){
+          if (item.lang.includes(langTag)) {
+            return true;
+          }
+        }
       });
     }
 
