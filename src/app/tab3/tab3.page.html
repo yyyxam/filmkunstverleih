@@ -1,18 +1,75 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Suche-Test
+      Suche
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+
+<ion-toolbar>
+  <ion-buttons slot="primary">
+    <ion-button (click)="clickedSearch()">
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-searchbar #search debounce="500" (ionChange)="_ionChange($event)" placeholder="Search Movies"></ion-searchbar>
+</ion-toolbar>
+
+
 <ion-content [fullscreen]="true">
+
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Suche</ion-title>
     </ion-toolbar>
   </ion-header>
 
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <!-- Genre-Tags -->
+        <ion-list>
+          <ion-item>
+            <ion-select (ionChange)="onGenreFilter($event)" placeholder="Genres" [multiple]="true">
+              <!-- Optionen müssen aus Datenbank geholt werden -->
+              <ion-select-option value="drama">Drama</ion-select-option>
+              <ion-select-option value="thriller">Thriller</ion-select-option>
+              <ion-select-option value="comedy">Comedy</ion-select-option>
+              <ion-select-option value="sci-fi">Sci-Fi</ion-select-option>
+              <ion-select-option value="horror">Horror</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col>
+        <!-- Lang-Tags -->
+        <ion-list>
+          <ion-item>
+            <ion-select (ionChange)="onLangFilter($event)" placeholder="Sprachen" [multiple]="true">
+              <!-- Optionen müssen aus Datenbank geholt werden -->
+              <ion-select-option value="deutsch">Deutsch</ion-select-option>
+              <ion-select-option value="englisch">Englisch</ion-select-option>
+              <ion-select-option value="spanisch">Spanisch</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor ='let item of searchedItem'>
+        <ion-label routerLink='/film-content' >{{item.title}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
 
 
 
@@ -21,15 +78,6 @@
 
 
 
-
-  <ion-toolbar>
-    <ion-buttons slot="primary">
-      <ion-button (click)="clickedSearch()">
-        <ion-icon slot="icon-only" name="search"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-searchbar placeholder="Search Movies"></ion-searchbar>
-  </ion-toolbar>
 
 
   
