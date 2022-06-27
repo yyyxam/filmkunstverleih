@@ -1,24 +1,17 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <img src="/assets/header.png" alt="">
+    <div class="header-img">
+      <!-- <h1>Startseite</h1> -->
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Startseite</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="Neu" [fullscreen]="true">
 
 
-<ion-content class="Neu" color="tertiary" >
-
-
-    <ion-toolbar color="primary">
-      <ion-title size="large" color="">Neu</ion-title>
-    </ion-toolbar>
-
+<ion-toolbar>
+  <ion-title size="large">Neu</ion-title>
+</ion-toolbar>
 
 
 
@@ -27,7 +20,7 @@
             [spaceBetween]="20">
 
     <ng-template swiperSlide>
-      <ion-card  color="primary">
+      <ion-card>
         <img src="/assets/Less than zero.jpg" alt="">
         <ion-card-content>
           <ion-card-title>
@@ -62,15 +55,8 @@
 
   </swiper>
 
-
-
-
-
-
-
-
   <ion-toolbar>
-    <ion-title size="large" color="dark">Empfehlung</ion-title>
+    <ion-title size="large">Empfehlung</ion-title>
   </ion-toolbar>
 
   <swiper #swiper
@@ -118,15 +104,8 @@
 </swiper>
 
 
-
-
-
-
-
-
-
 <ion-toolbar>
-  <ion-title size="large" color="dark">Drama</ion-title>
+  <ion-title size="large">Drama</ion-title>
 </ion-toolbar>
 
 <swiper #swiper
@@ -175,7 +154,3 @@
 
 </ion-content>
 
-
-
-
-</ion-content>
