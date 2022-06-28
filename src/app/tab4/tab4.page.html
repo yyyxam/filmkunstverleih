@@ -1,29 +1,93 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Watch List
-    </ion-title>
+    <img src="/assets/header.png" alt="">
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Watch List</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  
-  
-
-
-  <body>
-    <ion-app>
-     
-
       <ion-content fullscreen>
+        <ion-title id="filmkunstverleih" color="">format filmkunstverleih</ion-title>
+    <ion-toolbar color="secondary">
+      <ion-title size="large" color="">Watch List</ion-title>
+    </ion-toolbar>
         <ion-list>
-          <ion-list-header class="list-header"> Recent </ion-list-header>
+          <ion-item>
+            <ion-grid>
+              <ion-row class="ion-align-items-center">
+                <ion-col size="2">
+                  <ion-thumbnail>
+                    <img src="/assets/As-it-was.jpg" />
+                  </ion-thumbnail>
+                </ion-col>
+                <ion-col size="6" routerLink='/film-content'>
+                    <h2>As it was</h2>
+                </ion-col>
+                <ion-col size="2">
+                  <ion-button fill="clear">
+                    <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+                <ion-col size="2">
+                  <ion-button fill="clear">
+                    <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+          <ion-item>
+            <ion-grid>
+              <ion-row class="ion-align-items-center">
+                <ion-col size="2">
+                  <ion-thumbnail>
+                    <img src="/assets/Less than zero.jpg" />
+                  </ion-thumbnail>
+                </ion-col>
+                <ion-col size="6" routerLink=''>
+                    <h2>Less than zero</h2>
+                </ion-col>
+                <ion-col size="2">
+                  <ion-button fill="clear">
+                    <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+                <ion-col size="2">
+                  <ion-button fill="clear">
+                    <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+          <ion-item>
+            <ion-grid>
+              <ion-row class="ion-align-items-center">
+                <ion-col size="2">
+                  <ion-thumbnail>
+                    <img src="/assets/Privilege.jpg" />
+                  </ion-thumbnail>
+                </ion-col>
+                <ion-col size="6" routerLink=''>
+                    <h2>Privelege</h2>
+                </ion-col>
+                <ion-col size="2">
+                  <ion-button fill="clear">
+                    <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+                <ion-col size="2">
+                  <ion-button fill="clear">
+                    <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+
+       <!-- <ion-list>
+          <ion-toolbar>
+            <ion-title size="large">WatchList</ion-title>
+          </ion-toolbar>
 
           <ion-item routerLink='/film-content'>
             <ion-avatar slot="start">
@@ -32,6 +96,12 @@
             <ion-label>
               <h1>As it was</h1>
             </ion-label>
+            <ion-button fill="clear" slot="primary">
+              <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+            </ion-button>
+            <ion-button fill="clear" slot="secondary">
+              <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+            </ion-button>
           </ion-item>
 
           <ion-item>
@@ -40,7 +110,7 @@
             </ion-avatar>
             <ion-label>
               <h1>Less than zero</h1>
-              
+
             </ion-label>
           </ion-item>
 
@@ -50,7 +120,7 @@
             </ion-avatar>
             <ion-label>
               <h1>Privilege</h1>
-             
+
             </ion-label>
           </ion-item>
 
@@ -60,20 +130,10 @@
             </ion-avatar>
             <ion-label>
               <h1>Red Blue Pills</h1>
-             
+
             </ion-label>
           </ion-item>
-        </ion-list>
+        </ion-list> -->
 
-       
+
       </ion-content>
-    </ion-app>
-
-
-
-
-  </body>
-
-
-
-</ion-content>
