@@ -22,7 +22,12 @@ ion-toolbar {
     
 }
 ion-title {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     font-style: inherit;
+}
+ion-card-title {
+    text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
 }

@@ -7,6 +7,33 @@
   text-align: center;
   justify-content: center;
 }
+ion-content {
+  ion-searchbar {
+    
+   
+    --icon-color: #BE1622;
+    --border-radius: 10px;
+    --box-shadow: 0px;
+  }
+}
+ion-button {
+  margin: 8px 12px 16px 8px;
+  width: 46.5%;
+  justify-content: center;
+  align-items: center;
+  --color: white;
+  --background: #9D9D9C;
+  
+}
+ion-select {
+  --padding-end: 60px;
+  --padding-start: 60px;
+  
+}
+
+
+
+
 ion-header {
   ion-toolbar {
     box-shadow: 1px 4px 8px 0px rgba(199, 0, 0, 0);

@@ -8,15 +8,16 @@
 <ion-content [fullscreen]="true" color="tertiary">
 
   <ion-title id="filmkunstverleih" color="">format filmkunstverleih</ion-title>
-  <ion-buttons slot="primary"></ion-buttons>
+ 
   <ion-searchbar #search debounce="500" (ionChange)="_ionChange($event)" placeholder="Search Movies"></ion-searchbar>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col >
+  
+    
+      
         <!-- Genre-Tags -->
-        <ion-list>
-          <ion-item color="secondary">
+        <ion-button>
+        
+          
             <ion-select (ionChange)="onGenreFilter($event)" placeholder="Genres" [multiple]="true">
               <!-- Optionen müssen aus Datenbank geholt werden -->
               <ion-select-option value="drama">Drama</ion-select-option>
@@ -25,67 +26,33 @@
               <ion-select-option value="sci-fi">Sci-Fi</ion-select-option>
               <ion-select-option value="horror">Horror</ion-select-option>
             </ion-select>
-          </ion-item>
-        </ion-list>
-      </ion-col>
-      <ion-col>
+         
+        
+      
+      </ion-button>
+      <ion-button >
         <!-- Lang-Tags -->
-        <ion-list>
-          <ion-item color="secondary">
-            <ion-select (ionChange)="onLangFilter($event)" placeholder="Sprachen" [multiple]="true">
+       
+            <ion-select (ionChange)="onLangFilter($event)" placeholder="Sprachen" [multiple]="true" >
               <!-- Optionen müssen aus Datenbank geholt werden -->
               <ion-select-option value="deutsch">Deutsch</ion-select-option>
               <ion-select-option value="englisch">Englisch</ion-select-option>
               <ion-select-option value="spanisch">Spanisch</ion-select-option>
             </ion-select>
-          </ion-item>
-        </ion-list>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+         
+     
+      </ion-button>
 
   <ion-content  color="tertiary">
     <ion-list>
-      <ion-item *ngFor ='let item of searchedItem' color="tertiary">
+      <ion-item *ngFor ='let item of searchedItem'>
         <ion-label routerLink='/film-content' >{{item.title}}</ion-label>
       </ion-item>
     </ion-list>
   </ion-content>
 
-  <ion-list>
-    <ion-card>
-    <ion-item>
-      <ion-label>Genre</ion-label>
-      <ion-select placeholder="Select all Genres" multiple="true">
-        <ion-select-option value="drama">Drama</ion-select-option>
-        <ion-select-option value="action">Action</ion-select-option>
-        <ion-select-option value="horror">Horror</ion-select-option>
-        <ion-select-option value="comedy">Comedy</ion-select-option>
-        <ion-select-option value="adventure">Adventure</ion-select-option>
-        <ion-select-option value="animated">Animated</ion-select-option>
-        <ion-select-option value="sci-fi">Sci-Fi</ion-select-option>
-        <ion-select-option value="historical">Historical </ion-select-option>
-        <ion-select-option value="western">Western</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-card>
-  </ion-list>
+  
 
-  <ion-list>
-    <ion-card>
-    <ion-item>
-      <ion-label>
-        Sprache
-      </ion-label>
-      <ion-select placeholder="Select all Sprachen" multiple="true">
-        <ion-select-option value="deutsch">Deutsch</ion-select-option>
-        <ion-select-option value="englisch">Englisch</ion-select-option>
-        <ion-select-option value="arabisch">Arabisch</ion-select-option>
-        <ion-select-option value="spanisch">Spanisch</ion-select-option>
-        <ion-select-option value="russisch">Russisch</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-card>
-  </ion-list>
+  
 
 </ion-content>

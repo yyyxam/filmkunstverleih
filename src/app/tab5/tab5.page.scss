@@ -1,0 +1,37 @@
+ion-header {
+    ion-toolbar {
+        box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.445);
+        
+    }
+}
+
+ion-card {
+    border-radius: 5px;
+    width: 90%;
+    margin: 3% 0% 3% 5%;
+    
+}
+ion-header {
+    ion-title {
+        font-size: 28px;
+        
+        
+    }
+}
+ion-title {
+    font-size: 25px;
+    font-weight: bold;
+    font-style: inherit;
+    
+}
+h1 {
+    font-size: 20px;
+    
+}
+h2 {
+   color: #9D9D9C;
+   font-weight: bold;
+}
+ion-icon {
+    --ionicon-stroke-width: 22px;
+}

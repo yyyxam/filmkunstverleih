@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
 
+
 @Component({
   selector: 'app-tab5',
   templateUrl: 'tab5.page.html',
@@ -12,27 +13,36 @@ export class Tab5Page {
 
   constructor(
    
-    public alertCtrl: AlertController
+    private alertController: AlertController
   ) {}
   
-   async showAlert(){
-    const alert = await this.alertCtrl.create({
-      header: "Gib deinen Namen an",
+  showPrompt() {
+    this.alertController.create({
+      header: 'Gib deinen Namen an',
       inputs: [
-        {type: 'text', placeholder: "Name"}
+        {
+          
+          name: '',
+          
+        },
       ],
       buttons: [
-        {text: "Speichern", handler: (res) => {
-          console.log(res.promo);
-
+        {
+          text: 'Cancel',
+          handler: (data: any) => {
+            console.log('Canceled', data);
+          }
+        },
+        {
+          text: 'Done!',
+          handler: (data: any) => {
+            console.log('Saved Information', data);
+          }
         }
-      },
-      {
-        text: "abbrechen"
-      }
       ]
-
-    }).then(res => res.present());
+    }).then(res => {
+      res.present();
+    });
   }
 
   

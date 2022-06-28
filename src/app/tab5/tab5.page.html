@@ -1,19 +1,19 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
     <ion-title>
       Einstellung
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="tertiary">
   
 
   
   <ion-card>
     <ion-card-title>
       <ion-toolbar color="secondary">
-        <ion-title size="large" color="">Benutzerdaten</ion-title>
+        <ion-title  color="">Benutzerdaten</ion-title>
       </ion-toolbar>
     </ion-card-title>
     <ion-card-content>
@@ -22,9 +22,9 @@
           <ion-icon name="person-outline" size="large"></ion-icon>
         </ion-avatar>
         <ion-icon  name="pencil-outline" slot="end" color="primary"></ion-icon>
-        <ion-label (click)="showAlert()">
+        <ion-label (click)="showPrompt()">
           <h2>Benutzername</h2>
-          <h1>{{show}}</h1>  
+          <h1>{{data}}</h1>  
         </ion-label>
       </ion-item>
 
@@ -57,7 +57,7 @@
   <ion-card>
     <ion-card-title>
       <ion-toolbar color="secondary">
-        <ion-title size="large" color="">Abo</ion-title>
+        <ion-title color="">Abo</ion-title>
       </ion-toolbar>
     </ion-card-title>
     <ion-card-content>
@@ -84,20 +84,44 @@
       </ion-item>
     </ion-card-content>
   </ion-card>
+
   <ion-card>
     <ion-card-title>
-      <h1>Verlauf</h1>
+      <ion-toolbar color="secondary">
+        <ion-title color="">Verlauf</ion-title>
+      </ion-toolbar>
     </ion-card-title>
     <ion-card-content>
-      <ion-item>
-      <ion-avatar slot="start">
-        <img src="/assets/As-it-was.jpg" />
-      </ion-avatar>
-      <ion-label>
-        <h1>As it was</h1>
-      </ion-label>
+      <ion-item routerLink='/film-content'>
+        <ion-avatar slot="start">
+          <img src="/assets/As-it-was.jpg" />
+        </ion-avatar>
+        <ion-label>
+          <h1>As it was</h1>
+        </ion-label>
       </ion-item>
-      <ion-button>Kompletten Verlauf anzeigen</ion-button>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="/assets/Less than zero.jpg" />
+        </ion-avatar>
+        <ion-label>
+          <h1>Less than zero</h1>
+          
+        </ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-avatar slot="start">
+          <img src="/assets/Privilege.jpg" />
+        </ion-avatar>
+        <ion-label>
+          <h1>Privilege</h1>
+         
+        </ion-label>
+      </ion-item>
+      <ion-button expand="block" routerLink='../tab4'>Kompletten Verlauf anzeigen</ion-button>
     </ion-card-content>
   </ion-card>
+ 
 </ion-content>
