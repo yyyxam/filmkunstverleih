@@ -13,11 +13,6 @@ import {Observable} from 'rxjs';
 export class Tab5Page {
 
  data= 'sss';
-  constructor(
-
-    private alertController: AlertController
-  ) {}
-
   search: Observable<any>;
   titel: any;
   regie: any;
