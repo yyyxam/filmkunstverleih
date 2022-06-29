@@ -10,7 +10,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class Tab5Page {
   
-
+ data= 'sss';
   constructor(
    
     private alertController: AlertController
@@ -22,21 +22,23 @@ export class Tab5Page {
       inputs: [
         {
           
-          name: '',
+          name: 'Test',
+
           
         },
       ],
       buttons: [
         {
-          text: 'Cancel',
+          text: 'Abbrechen',
           handler: (data: any) => {
             console.log('Canceled', data);
           }
         },
         {
-          text: 'Done!',
+          text: 'Speichern!',
           handler: (data: any) => {
             console.log('Saved Information', data);
+            this.data= data.Test;
           }
         }
       ]
