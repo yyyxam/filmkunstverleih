@@ -1,14 +1,17 @@
 ion-header {
     ion-toolbar {
         box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.445);
+        text-align: center;
         
     }
 }
 
 ion-card {
     border-radius: 5px;
-    width: 90%;
-    margin: 3% 0% 3% 5%;
+    width: 96%;
+    margin: 5% 2% 3% 2%;
+    --background: #CBCCCC;
+    
     
 }
 ion-header {
@@ -24,14 +27,30 @@ ion-title {
     font-style: inherit;
     
 }
+
+ion-content {
+    --ion-background-color: #CBCCCC;
+}
+ion-list-header {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 6px auto;
+}
 h1 {
     font-size: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
     
 }
+ion-thumbnail {
+    --size: 20px;
+  }
 h2 {
    color: #9D9D9C;
    font-weight: bold;
 }
 ion-icon {
     --ionicon-stroke-width: 22px;
+    font-size: 24px;
+    
 }
