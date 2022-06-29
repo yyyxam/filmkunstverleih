@@ -12,7 +12,9 @@ import {Observable} from 'rxjs';
 })
 export class Tab5Page {
 
- data= 'sss';
+ data= 'abc';
+ email= 'abc@gmail.com';
+ kundenNummer= '123456';
   search: Observable<any>;
   titel: any;
   regie: any;
@@ -33,7 +35,7 @@ export class Tab5Page {
         {
 
           name: 'Test',
-
+          placeholder: 'Name'
 
         },
       ],
@@ -57,6 +59,69 @@ export class Tab5Page {
     });
   }
 
+  showPrompt2() {
+    this.alertController.create({
+      header: 'Gib deine Email an',
+      inputs: [
+        {
 
+          name: 'Email',
+          placeholder: 'Email'
+
+
+        },
+      ],
+      buttons: [
+        {
+          text: 'Abbrechen',
+          handler: (email: any) => {
+            console.log('Canceled', email);
+          }
+        },
+        {
+          text: 'Speichern!',
+          handler: (email: any) => {
+            console.log('Saved Information', email);
+            this.email= email.Email;
+          }
+        }
+      ]
+    }).then(res => {
+      res.present();
+    });
+  }
+
+
+  showPrompt3() {
+    this.alertController.create({
+      header: 'Gib deine Email an',
+      inputs: [
+        {
+
+          name: 'Nummer',
+          placeholder: 'Kundennummer'
+
+
+        },
+      ],
+      buttons: [
+        {
+          text: 'Abbrechen',
+          handler: (kundenNummer: any) => {
+            console.log('Canceled', kundenNummer);
+          }
+        },
+        {
+          text: 'Speichern!',
+          handler: (kundenNummer: any) => {
+            console.log('Saved Information', kundenNummer);
+            this.kundenNummer= kundenNummer.Nummer;
+          }
+        }
+      ]
+    }).then(res => {
+      res.present();
+    });
+  }
 
 }

@@ -21,7 +21,7 @@
         <ion-avatar slot="start">
           <ion-icon name="person-outline" size="large"></ion-icon>
         </ion-avatar>
-        <ion-icon  name="pencil-outline" slot="end" color="primary"></ion-icon>
+        <ion-icon  (click)="showPrompt()" name="pencil-outline" slot="end" color="primary"></ion-icon>
         <ion-label (click)="showPrompt()">
           <h2>Benutzername</h2>
           <h1>{{data}}</h1>  
@@ -32,10 +32,10 @@
         <ion-avatar slot="start">
           <ion-icon name="at-outline" size="large"></ion-icon>
         </ion-avatar>
-        <ion-icon  name="pencil-outline" slot="end" color="primary"></ion-icon>
-        <ion-label>
+        <ion-icon  (click)="showPrompt2()" name="pencil-outline" slot="end" color="primary"></ion-icon>
+        <ion-label (click)="showPrompt2()">
           <h2>Email</h2>
-          <h1>abc@gmail.com</h1>  
+          <h1>{{email}}</h1>  
         </ion-label>
       </ion-item>
 
@@ -43,10 +43,10 @@
         <ion-avatar slot="start">
           <ion-icon name="barcode-outline" size="large"></ion-icon>
         </ion-avatar>
-        <ion-icon  name="pencil-outline" slot="end" color="primary"></ion-icon>
-        <ion-label>
+        <ion-icon  (click)="showPrompt3()" name="pencil-outline" slot="end" color="primary"></ion-icon>
+        <ion-label (click)="showPrompt3()">
           <h2>Kundennummer</h2>
-          <h1>123456</h1>  
+          <h1>{{kundenNummer}}</h1>  
         </ion-label>
       </ion-item>
       
