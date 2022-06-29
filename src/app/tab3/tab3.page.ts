@@ -1,5 +1,8 @@
 import {Component, ViewChild} from '@angular/core';
-import {IonSearchbar} from "@ionic/angular";
+import {IonSearchbar} from '@ionic/angular';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-tab3',
@@ -7,7 +10,6 @@ import {IonSearchbar} from "@ionic/angular";
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-
   @ViewChild('search', { static: false }) search: IonSearchbar;
 
   //list = Datenbank
@@ -18,7 +20,7 @@ export class Tab3Page {
   private langInput: Array<String> = [];
 
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.list = [
     { title: 'Less Than Zero', tags: ['drama'], lang: ['deutsch', 'englisch', 'spanisch']},
     { title: 'As it was', tags: ['sci-fi', 'horror'], lang: ['deutsch', 'spanisch']},
@@ -29,25 +31,24 @@ export class Tab3Page {
     this.searchedItem = this.list;
   }
 
+
+
+
+
   movieSearch(): void {
-    //console.log(this.keyboardInput);
-    //console.log(this.genreInput);
-    //console.log(this.langInput);
     const genreIn = this.genreInput;
-    const langIn = this.langInput
+    const langIn = this.langInput;
     this.searchedItem = this.list;
     //KEYBOARD INPUT
     // DON'T filter IF the supplied input is an empty string
     if (this.keyboardInput && this.keyboardInput.trim() != '') {
-      this.searchedItem = this.searchedItem.filter((item: any) => {
-        return (item.title.toLowerCase().indexOf(this.keyboardInput.toLowerCase()) > -1);
-      });
+      this.searchedItem = this.searchedItem.filter((item: any) => (item.title.toLowerCase().indexOf(this.keyboardInput.toLowerCase()) > -1));
     }
 
     // if tags not empty, filter for them
     if (this.genreInput.length > 0){
       this.searchedItem = this.searchedItem.filter(function(item) {
-      for (let genreTag of genreIn){
+      for (const genreTag of genreIn){
         if (item.tags.includes(genreTag)) {
           return true;
         }
@@ -60,7 +61,7 @@ export class Tab3Page {
         console.log(item.title);
         console.log(item.lang);
 
-        for (let langTag of langIn){
+        for (const langTag of langIn){
           if (item.lang.includes(langTag)) {
             return true;
           }

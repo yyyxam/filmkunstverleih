@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import {Observable} from 'rxjs';
+
 
 
 
@@ -9,21 +11,27 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['tab5.page.scss']
 })
 export class Tab5Page {
-  
+  search: Observable<any>;
+  titel: any;
+  regie: any;
 
-  constructor(
-   
-    private alertController: AlertController
-  ) {}
-  
+  constructor(private alertController: AlertController, ) {}
+
+  addEntry(){
+    let date = {
+      titel: this.titel,
+      regie: this.regie
+    };
+  }
+
   showPrompt() {
     this.alertController.create({
       header: 'Gib deinen Namen an',
       inputs: [
         {
-          
+
           name: '',
-          
+
         },
       ],
       buttons: [
@@ -45,6 +53,6 @@ export class Tab5Page {
     });
   }
 
-  
+
 
 }
