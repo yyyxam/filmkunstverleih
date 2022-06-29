@@ -1,24 +1,25 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      <ion-icon name="arrow-back-outline" size="large" onclick="history.back()"></ion-icon>
-    </ion-title>
+  <ion-toolbar id="head">
+    <img src="/assets/header-img.png" alt="">
+    <ion-icon name="arrow-back-outline" size="large" onclick="history.back()"></ion-icon>
   </ion-toolbar>
+  
 </ion-header>
 
 
 
-<ion-content>
+
+<ion-content color="tertiary">
   <swiper #swiper
   [slidesPerView]="1"
   [spaceBetween]="20">
 
 
  <ng-template swiperSlide>
-    <ion-card>
+    <ion-card color="secondary">
       <img src="/assets/As it was-2.png" alt="">
       <ion-item>
-        <ion-label class="FilmName">
+        <ion-label class="FilmName" >
           As it was
         </ion-label>
         <ion-icon  name="add-outline" slot="end"></ion-icon>
@@ -39,7 +40,7 @@
 
 
 
-<ion-card>
+<ion-card >
 <div class="Inhalt">
   <h1>Inhalt</h1>
   <p>
