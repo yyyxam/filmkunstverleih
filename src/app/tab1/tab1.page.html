@@ -1,20 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <img src="/assets/header.png" alt="">
+    <ion-title id="filmkunstverleih" size="large">format filmkunstverleih</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" >
+<ion-content [fullscreen]="true" color="secondary">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Startseite</ion-title>
+      <ion-title id="filmkunstverleih" size="large">format filmkunstverleih</ion-title>
     </ion-toolbar>
   </ion-header>
 
 
 <ion-content class="Neu" color="tertiary" >
 
-  <ion-title id="filmkunstverleih" color="">format filmkunstverleih</ion-title>
+  
     <ion-toolbar color="secondary">
       <ion-title size="large" color="">Neu</ion-title>
     </ion-toolbar>
@@ -23,8 +24,8 @@
 
 
   <swiper #swiper
-            [slidesPerView]="2.5"
-            [spaceBetween]="20">
+            [slidesPerView]="2"
+            [spaceBetween]="1">
 
     <ng-template swiperSlide>
       <ion-card  color="secondary">
@@ -74,8 +75,8 @@
   </ion-toolbar>
 
   <swiper #swiper
-          [slidesPerView]="3"
-          [spaceBetween]="5">
+          [slidesPerView]="2.5"
+          [spaceBetween]="1">
 
   <ng-template swiperSlide>
     <ion-card color="secondary">
@@ -130,8 +131,8 @@
 </ion-toolbar>
 
 <swiper #swiper
-        [slidesPerView]="3"
-        [spaceBetween]="5">
+        [slidesPerView]="2.5"
+        [spaceBetween]="1">
 
 <ng-template swiperSlide>
   <ion-card color="secondary">
