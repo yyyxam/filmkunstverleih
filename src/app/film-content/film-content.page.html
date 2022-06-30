@@ -1,9 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar id="head">
     <img src="/assets/header-img.png" alt="">
-    <ion-icon name="arrow-back-outline" size="large" onclick="history.back()"></ion-icon>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
-  
+
 </ion-header>
 
 
@@ -89,6 +91,7 @@
     </ion-radio-group>
   </ion-list>
 
+  <ion-button expand="block" color="secondary">Verfügbarkeit prüfen</ion-button>
 </ion-card>
 
 <ion-card>
