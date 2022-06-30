@@ -1,39 +1,21 @@
 ion-header {
-    ion-toolbar {
-        box-shadow: 1px 4px 8px 0px rgba(199, 0, 0, 0);
-        img {
-            width: 100%;
-            display: flex;
-
-        }
-    }
-}
 ion-toolbar {
     box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.445);
+    --background: url(../../assets/header-img.png)
+    0 0/100% 100% no-repeat !important;
+    ion-icon {
+      color: #fff;
+    }
 
 }
-#head {
-    position: relative;
-}
-#head{
-    img {
-        display: block;
-    }
-}
-#head {
-    ion-icon {
-        position: absolute; bottom:0; left:0;
-    }
 }
 ion-card {
-
-
-img {
+  img {
 
     width: max-content;
     height: 30vh;
     padding-bottom: 0%;
-}
+  }
 }
 .FilmName {
     font-weight: bold;
