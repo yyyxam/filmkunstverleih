@@ -1,28 +1,56 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Meldungen
-    </ion-title>
+    <img src="/assets/header.png" alt="">
+    <ion-title id="filmkunstverleih" color="">format filmkunstverleih</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="tertiary">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Meldungen</ion-title>
+      <ion-title id="filmkunstverleih" color="">format filmkunstverleih</ion-title>
     </ion-toolbar>
   </ion-header>
 
+  <ion-toolbar color="secondary">
+    <ion-title size="large" color="">Meldungen</ion-title>
+  </ion-toolbar>
 
-  <ion-card>
+
+ 
+  <ion-card id="1" #first color="secondary" (click)="btnActivate(first)">
     
-    <div class="Schauspieler">
-      <h1>Schauspieler:</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius mattis aliquet. Nam finibus laoreet ipsum sed fringilla. In facilisis
-      </p>
-    </div>
+    <ion-card-header>
+      <ion-card-title>As it was</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie werden benachrichtigt, wenn der Film wieder verfügbar ist.
+    </ion-card-content>
+     
   </ion-card>
+
+  <ion-card id="2" #second color="secondary" (click)="btnActivate(second)">
+    
+    <ion-card-header>
+      <ion-card-title>Less than zero</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie werden benachrichtigt, wenn der Film wieder verfügbar ist.
+    </ion-card-content>
+     
+  </ion-card>
+
+  <ion-card id="3" #third color="secondary" (click)="btnActivate(third)">
+    
+    <ion-card-header>
+      <ion-card-title>Privelege</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie werden benachrichtigt, wenn der Film wieder verfügbar ist.
+    </ion-card-content>
+     
+  </ion-card>
+   
   
 
 
