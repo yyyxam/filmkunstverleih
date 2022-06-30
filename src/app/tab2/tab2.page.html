@@ -1,63 +1,46 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <img src="/assets/header.png" alt="">
-    <ion-title id="filmkunstverleih" color="">format filmkunstverleih</ion-title>
+    <ion-title id="filmkunstverleih" size="large">format filmkunstverleih</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="tertiary">
+<ion-content [fullscreen]="true" color="secondary">
+
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title id="filmkunstverleih" color="">format filmkunstverleih</ion-title>
+      <ion-title id="filmkunstverleih" size="large">format filmkunstverleih</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-toolbar color="secondary">
-    <ion-title size="large" color="">Meldungen</ion-title>
-  </ion-toolbar>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>ABO läuft bald ab!</ion-card-title>
+    <ion-card-subtitle>Ablaufdatum: 21.12.22</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    Bitte verlängern Sie ihr Abo!
+  </ion-card-content>
+</ion-card>
 
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Reservierung von filmName</ion-card-title>
+    <ion-card-subtitle>Status: Bestätigt</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    Der Film filmName ist heute bis 20:00 Uhr für Sie reserviert
+  </ion-card-content>
+</ion-card>
 
- 
-  <ion-card id="1" #first color="secondary" (click)="btnActivate(first)">
-    
-    <ion-card-header>
-      <ion-card-title>As it was</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Sie werden benachrichtigt, wenn der Film wieder verfügbar ist.
-    </ion-card-content>
-     
-  </ion-card>
-
-  <ion-card id="2" #second color="secondary" (click)="btnActivate(second)">
-    
-    <ion-card-header>
-      <ion-card-title>Less than zero</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Sie werden benachrichtigt, wenn der Film wieder verfügbar ist.
-    </ion-card-content>
-     
-  </ion-card>
-
-  <ion-card id="3" #third color="secondary" (click)="btnActivate(third)">
-    
-    <ion-card-header>
-      <ion-card-title>Privelege</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Sie werden benachrichtigt, wenn der Film wieder verfügbar ist.
-    </ion-card-content>
-     
-  </ion-card>
-   
-  
-
-
-  
-
-  
-
-
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>filmName ist wieder im Laden</ion-card-title>
+    <ion-card-subtitle>BENACHRICHTIGUNG</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    Der Film filmName ist wieder als medium im Laden zum Verleih bereit.
+  </ion-card-content>
+</ion-card>
 
 </ion-content>

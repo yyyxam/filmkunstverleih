@@ -11,12 +11,7 @@ export class Tab2Page {
   
   constructor() {}
 
-  btnActivate(ionicCard) {
-    if(ionicCard._color === 'secondary')
-      ionicCard.color =  'tertairy';
-    else
-      ionicCard.color = 'tertairy';
-  }
+ 
 
  
 }
