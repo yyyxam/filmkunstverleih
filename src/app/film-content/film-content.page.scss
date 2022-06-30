@@ -5,10 +5,30 @@ ion-toolbar {
     0 0/100% 100% no-repeat !important;
     ion-icon {
       color: #fff;
+
+    }
+}
+}
+#head {
+    position: relative;
+}
+#head{
+    img {
+        width: 100%;
+
+            display: flex;
+    }
+}
+#head {
+    ion-icon {
+        color: #BE1622;
+        position: absolute; bottom:0; left:0;
+        margin-bottom: 11px;
+        margin-left: 4px;
     }
 
 }
-}
+
 ion-card {
   img {
 
@@ -22,17 +42,19 @@ ion-card {
     font-size: 20px;
 }
 .Inhalt {
-    margin: 3%;
+    margin: 6%;
 }
 h1 {
-    color: #1c1919;
+    color: #ffffff;
 }
-
+p {
+    color: #000000;
+}
 .Schauspieler {
-    margin: 3%;
+    margin: 6%;
 }
 .Regie {
-    margin: 3%;
+    margin: 6%;
 }
 .Verfügbar {
     font-size: large;
