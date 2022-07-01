@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import {Observable} from 'rxjs';
+import {ApiService} from '../api.service';
 
 
+// TODO clean up sql tries
 
 
 @Component({
@@ -11,31 +13,20 @@ import {Observable} from 'rxjs';
   styleUrls: ['tab5.page.scss']
 })
 export class Tab5Page {
+  data= 'sss';
+  search: object;
+  titel = 'test_titel';
+  regie: 'test_regie';
 
- data= 'sss';
-  search: Observable<any>;
-  titel: any;
-  regie: any;
+  constructor(private alertController: AlertController, public _apiService: ApiService) {
 
-  constructor(private alertController: AlertController, ) {}
-
-  addEntry(){
-    let date = {
-      titel: this.titel,
-      regie: this.regie
-    };
   }
 
   showPrompt() {
     this.alertController.create({
       header: 'Gib deinen Namen an',
       inputs: [
-        {
-
-          name: 'Test',
-
-
-        },
+        {name: 'Test'},
       ],
       buttons: [
         {
@@ -49,12 +40,24 @@ export class Tab5Page {
           handler: (data: any) => {
             console.log('Saved Information', data);
             this.data= data.Test;
+            console.log("data-test ausgabe:");
+            console.log(data.Test);
+            //this.getAllMovies();
           }
         }
       ]
     }).then(res => {
       res.present();
     });
+  }
+
+  //testing
+  getAllMovies() {
+    this._apiService.getAllMovies().toPromise().then((data => {
+      console.log(data);
+      this.search = data;
+    }));
+
   }
 
 

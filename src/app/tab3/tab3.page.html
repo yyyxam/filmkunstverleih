@@ -20,6 +20,10 @@
 
             <ion-select (ionChange)="onGenreFilter($event)" placeholder="Genres" [multiple]="true">
               <!-- Optionen müssen aus Datenbank geholt werden -->
+              <!-- TODO: genres aus db beziehen -->
+              <ion-select-option value="drama">Drama</ion-select-option>
+
+
               <ion-select-option value="drama">Drama</ion-select-option>
               <ion-select-option value="thriller">Thriller</ion-select-option>
               <ion-select-option value="comedy">Comedy</ion-select-option>
@@ -33,7 +37,7 @@
       <ion-button >
         <!-- Lang-Tags -->
 
-            <ion-select (ionChange)="searchData()" placeholder="Sprachen" [multiple]="true" >
+            <ion-select (ionChange)="onLangFilter($event)" placeholder="Sprachen" [multiple]="true" >
               <!-- Optionen müssen aus Datenbank geholt werden -->
               <ion-select-option value="deutsch">Deutsch</ion-select-option>
               <ion-select-option value="englisch">Englisch</ion-select-option>
