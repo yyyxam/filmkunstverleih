@@ -3,12 +3,17 @@
     font-size: 15px;
     font-weight: 400;
     padding: 5px;
+    
     display: flex;
     text-align: center;
     justify-content: center;
+    color: rgb(255, 255, 255);
 }
 ion-header {
+
+  
     ion-toolbar {
+      --background: #9D9D9C;
         box-shadow: 1px 4px 8px 0px rgba(199, 0, 0, 0);
         img {
             width: 100%;
@@ -30,14 +35,23 @@ ion-title {
   
   ion-content {
     --ion-background-color: #CBCCCC;
-    --ion-text-color: #fff;
+    
     
     ion-icon{
-      color: #fff;
+      color: #BE1622;
       font-weight: 400;
       font-size: 24px;
     }
-    h2 {
+    ion-thumbnail {
+      --size: 40px;
+    }
+    h3 {
+      font-size: 20px;
       margin: 0px;
+      padding-left: 15px;
+      color: black;
+      font-weight: normal;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
   }
