@@ -15,8 +15,6 @@
 
 <ion-content [fullscreen]="true" color="tertiary">
 
-  <ion-title id="filmkunstverleih" color="">format filmkunstverleih</ion-title>
-
   <ion-searchbar #search debounce="500" (ionChange)="_ionChange($event)" placeholder="Search Movies"></ion-searchbar>
 
 
@@ -31,9 +29,6 @@
             <ion-select (ionChange)="onGenreFilter($event)" placeholder="Genres" [multiple]="true">
               <!-- Optionen müssen aus Datenbank geholt werden -->
               <!-- TODO: genres aus db beziehen -->
-              <ion-select-option value="drama">Drama</ion-select-option>
-
-
               <ion-select-option value="drama">Drama</ion-select-option>
               <ion-select-option value="thriller">Thriller</ion-select-option>
               <ion-select-option value="comedy">Comedy</ion-select-option>
