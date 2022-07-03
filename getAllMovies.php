@@ -5,12 +5,12 @@ ini_set('display_errors', 1);
 header('Content-Type: application/json; charset=utf-8');
 
 
-$sql = "SELECT * FROM film"; //from film
+$query = "SELECT * FROM film"; //from film
 try {
 
   //$result = array
   //wird zu json encodiert
-  $statement = $pdo->prepare($sql);
+  $statement = $pdo->prepare($query);
   $statement->execute();
   $results = $statement->fetchAll(PDO::FETCH_ASSOC);
   $json = json_encode($results);

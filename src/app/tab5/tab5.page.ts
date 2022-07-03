@@ -48,9 +48,7 @@ export class Tab5Page {
           handler: (data: any) => {
             console.log('Saved Information', data);
             this.data= data.Test;
-            console.log("data-test ausgabe:");
-            console.log(data.Test);
-            //this.getAllMovies();
+
           }
         }
       ]
@@ -58,16 +56,6 @@ export class Tab5Page {
       res.present();
     });
   }
-
-  //testing
-  getAllMovies() {
-    this._apiService.getAllMovies().toPromise().then((data => {
-      console.log(data);
-      this.search = data;
-    }));
-
-  };
-
 
   showPrompt2() {
     this.alertController.create({
